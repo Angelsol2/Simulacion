@@ -1,0 +1,49 @@
+
+package org.example;
+
+import java.util.Random;
+
+public class FormacionEquipos {
+
+
+    String formacionActual;
+    public static String[] formacion = {
+            "2-2-4",
+            "2-3-5",
+            "3-2-5",
+            "3-3-4",
+            "3-4-3",
+            "3-5-2",
+            "3-6-1",
+            "4-2-4",
+            "4-3-3",
+            "4-4-2",
+            "4-4-1-1",
+            "4-5-1",
+            "4-2-3-1",
+            "4-1-4-1",
+            "5-3-2",
+            "5-4-1",
+            "5-2-3"
+    };
+
+    public static String FormacionAleatoriaLocal() {
+        Random rand = new Random();
+        return formacion[rand.nextInt(17)];
+    }
+
+    public static String FormacionAleatoriaVisitante() {
+        Random rand = new Random();
+        return formacion[rand.nextInt(17)];
+    }
+
+
+    public String getFormacionActualVisitante() {
+        return FormacionAleatoriaLocal();
+    }
+
+    public String getFormacionActualLocal() {
+        return FormacionAleatoriaVisitante();
+
+    }
+}
